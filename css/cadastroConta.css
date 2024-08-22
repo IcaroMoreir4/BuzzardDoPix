@@ -1,0 +1,122 @@
+/* Block: login */
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at top left, rgba(235, 101, 18, 0.45) 0%, rgba(0, 0, 0, 0) 25%),             radial-gradient(circle at bottom right, rgba(235, 101, 18, 0.45) 0%, rgba(0, 0, 0, 0) 25%),             #000000;
+}
+
+.login__container {
+    background-color: #1a1a1a00;
+    border: 2px solid #ff6a00;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 400px;
+    text-align: center;
+}
+
+.login__logo {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.login__title {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.login__form {
+    margin-bottom: 1.5rem;
+}
+
+.login__input-group {
+    margin-bottom: 1rem;
+}
+
+.login__label {
+    display: block;
+    text-align: left;
+    color: #F58634;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.login__input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ff6a00;
+    background-color: #33333300;
+    color: #F58634;
+}
+
+.login__terms {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.login__checkbox {
+    margin-right: 0.5rem;
+}
+
+.login__terms-label {
+    color: #ffffff;
+    font-size: 0.8rem;
+}
+
+.login__link {
+    color: #ff6a00;
+    text-decoration: none;
+}
+
+.login__link:hover {
+    text-decoration: underline;
+}
+
+.login__button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.login__button--create {
+    background-color: #ff6a00;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.login__button--signin {
+    background-color: #333;
+    color: #ff6a00;
+}
+
+.login__divider {
+    color: #ffffff;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.login__divider::before,
+.login__divider::after {
+    content: "";
+    width: 40%;
+    height: 1px;
+    background-color: #ff6a00;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login__divider::before {
+    left: 0;
+}
+
+.login__divider::after {
+    right: 0;
+}
