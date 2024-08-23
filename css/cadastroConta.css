@@ -91,8 +91,10 @@
 }
 
 .login__button--signin {
-    background-color: #333;
-    color: #ff6a00;
+    background-color: #F58634;
+    color: #FFF;
+    width: 70%;
+    border-radius: 40px;
 }
 
 .login__divider {
