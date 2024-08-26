@@ -1,5 +1,0 @@
-/* Ao iniciar a estilização de uma nova pagina, cria o css dela e importa aqui assim "@import url(./nomeDoArquivo.css);" */
-
-@import url(./reset.css);
-@import url(./cadastroConta.css);
-@import url(./home.css);
