@@ -1,3 +1,18 @@
-"scripts": {
-  "build:css": "npx tailwindcss build src/css/styles.css -o public/css/styles.css"
+{
+  "name": "buzzarddopix",
+  "version": "1.0.0",
+  "description": "Este repositório contém a implementação inicial do front-end para o projeto **Buzzard of Pix**.",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./src/css/style.css -o ./public/css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.42",
+    "tailwindcss": "^3.4.10"
+  }
 }

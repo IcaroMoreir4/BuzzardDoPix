@@ -1,66 +1,85 @@
-```plaintext
-buzzardPix/
-├── public/                 # Arquivos públicos acessíveis diretamente pelo navegador
-│   ├── assets/             # Imagens, fontes, ícones, etc.
-│   ├── css/                # Arquivos CSS gerados pelo Tailwind e customizações adicionais
-│   ├── js/                 # Arquivos JavaScript
-│   ├── index.html          # Página principal do projeto
-│   └── ...                 # Outras páginas HTML
-├── src/                    # Arquivos de código-fonte
-│   ├── css/                # Arquivos de estilo antes da compilação pelo Tailwind
-│   │   └── styles.css      # Arquivo principal para importar Tailwind e custom CSS
-│   ├── js/                 # Arquivos JavaScript antes de minificação/otimização
-│   │   └── app.js          # Arquivo JS principal
-│   └── html/               # Templates HTML (se aplicável)
-│       └── partials/       # Partes reutilizáveis do HTML, como cabeçalhos e rodapés
-├── tailwind.config.js      # Configuração personalizada do Tailwind
-├── package.json            # Arquivo de dependências do projeto
-└── README.md               # Documentação do projeto
+# Estrutura de Pastas do Projeto BuzzardPix
+
+Este documento explica a estrutura de pastas do projeto e o propósito de cada diretório e arquivo, para ajudar na organização e compreensão do código.
+
+## Estrutura de Pastas
+
+```
+BUZZARDPIX/
+│
+├── public/
+│   ├── assets/
+│   │   └── logo.png
+│   ├── css/
+│   │   ├── cadastroConta.css
+│   │   ├── cores.css
+│   │   ├── home.css
+│   │   ├── reset.css
+│   │   └── tipografia.css
+│   ├── js/
+│   ├── cadastraConta.html
+│   └── home.html
+│
+├── src/
+│   ├── css/
+│   │   └── style.css
+│   ├── html/
+│   │   ├── footer.html
+│   │   └── header.html
+│   └── js/
+│       └── app.js
+│
+├── .gitignore
+├── baixarTailwind.md
+├── caminho.md
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+└── tailwind.config.js
 ```
 
-### Detalhes:
+## Descrição das Pastas e Arquivos
 
-1. **`public/`**:
-   - **`assets/`**: Coloque todas as imagens, fontes e outros recursos que serão usados nas páginas.
-   - **`css/`**: Contém o CSS final gerado, incluindo o arquivo compilado pelo Tailwind.
-   - **`js/`**: Armazena os arquivos JavaScript prontos para produção.
-   - **`index.html`**: Sua página inicial. Você pode criar mais arquivos HTML para outras páginas aqui.
+### 1. `public/`
+- **`assets/`**: Pasta que contém arquivos estáticos como imagens, ícones, etc. 
+- **`css/`**: Contém os arquivos CSS utilizados nas páginas HTML dentro da pasta `public`.
+  - **`cadastroConta.css`**: Estilos específicos para a página de cadastro.
+  - **`cores.css`**: Definições de cores globais do site.
+  - **`home.css`**: Estilos específicos para a página principal (home).
+  - **`reset.css`**: Estilos que reiniciam as configurações padrões do navegador.
+  - **`tipografia.css`**: Estilos relacionados à tipografia do site.
 
-2. **`src/`**:
-   - **`css/`**: Inclui seus arquivos de estilo antes de serem processados pelo Tailwind. Use o arquivo `styles.css` para importar Tailwind e adicionar estilos personalizados.
-   - **`js/`**: Coloque seus scripts JS aqui antes de minificação ou bundling.
-   - **`html/`**: Se você estiver usando templates ou construindo HTML de forma modular, essa pasta pode conter essas partes reutilizáveis.
+- **`js/`**: (Pasta vazia atualmente, mas destinada a scripts JS que podem ser específicos para páginas HTML no `public`).
+  
+- **`cadastraConta.html`**: Página de cadastro de conta.
+- **`home.html`**: Página principal do site.
 
-3. **`tailwind.config.js`**: Arquivo de configuração do Tailwind para customizar o framework conforme as necessidades do projeto.
+### 2. `src/`
+- **`css/`**: Contém arquivos CSS relacionados ao desenvolvimento principal. 
+  - **`style.css`**: Estilos globais ou base do site, compilados e usados no build final.
 
-4. **`package.json`**: Gerencia as dependências do projeto, como Tailwind CSS, PostCSS, etc.
+- **`html/`**: Contém partes de páginas HTML que podem ser importadas em outras páginas, como cabeçalhos e rodapés.
+  - **`footer.html`**: Rodapé reutilizável.
+  - **`header.html`**: Cabeçalho reutilizável.
 
-5. **`README.md`**: Documentação para explicar como configurar e usar o projeto.
+- **`js/`**: Contém scripts JavaScript principais.
+  - **`app.js`**: Arquivo JavaScript principal do site.
 
-### Passos Adicionais:
+### 3. Arquivos na Raiz
 
-1. **Instalação de Dependências**:
-   - Instale Tailwind e outras dependências via npm:
-     ```bash
-     npm install tailwindcss postcss autoprefixer
-     ```
+- **`.gitignore`**: Lista de arquivos e diretórios que o Git deve ignorar ao versionar o código.
+- **`baixarTailwind.md`**: Guia de como baixar e instalar o TailwindCSS no projeto.
+- **`caminho.md`**: (Arquivo que pode ser usado para descrever caminhos ou outros guias).
+- **`package-lock.json`**: Arquivo gerado automaticamente que trava as versões das dependências instaladas.
+- **`package.json`**: Lista de dependências do projeto e scripts npm.
+- **`postcss.config.js`**: Configurações do PostCSS usadas para processar o CSS, incluindo o TailwindCSS.
+- **`README.md`**: Este documento explicativo.
+- **`tailwind.config.js`**: Arquivo de configuração do TailwindCSS, onde são definidos temas, plugins e paths para o PurgeCSS.
 
-2. **Configuração do Tailwind**:
-   - Gere o arquivo de configuração do Tailwind:
-     ```bash
-     npx tailwindcss init
-     ```
+## Como Iniciar o Projeto
 
-3. **Build do CSS**:
-   - Use scripts no `package.json` para compilar o CSS:
-     ```json
-     "scripts": {
-       "build:css": "npx tailwindcss build src/css/styles.css -o public/css/styles.css"
-     }
-     ```
-   - Compile o CSS executando:
-     ```bash
-     npm run build:css
-     ```
-
-Essa estrutura permite uma boa organização, facilita a reutilização de código, e separa bem as responsabilidades entre as diferentes partes do projeto.
+1. Clone o repositório.
+2. Execute `npm install` para instalar todas as dependências.
+3. Siga as instruções no arquivo `baixarTailwind.md` para configurar o TailwindCSS.
+4. Utilize o script `npm run build:css` para gerar o arquivo CSS final a partir do Tailwind.
